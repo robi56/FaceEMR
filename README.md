@@ -23,10 +23,34 @@ The challenge link https://www.kaggle.com/c/challenges-in-representation-learnin
 The data consists of 48x48 pixel grayscale images of faces.The dataset contains facial expression  of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral
 
 **2. Model:** 
+
     In this work I have used the below CNN model 
     
       input_image->conv2d->pooling->conv2d->pooling->conv2d->pooling->dropout->softmax
-
+      
+   The code fragment
+   
+```
+x_image = tf.reshape(x, [-1, 48, 48, 1])
+    #48*48*1
+    conv1 = tf.layers.conv2d(x_image, 64, 3, 1, 'same', activation=tf.nn.relu)
+    #48*48*64
+    pool1 = tf.layers.max_pooling2d(conv1, 2, 2, 'same')
+    #24*24*64
+    conv2 = tf.layers.conv2d(pool1, 128, 3, 1, 'same', activation=tf.nn.relu)
+    #24*24*128
+    pool2 = tf.layers.max_pooling2d(conv2, 2, 2, 'same')
+    #12*12*128
+    conv3 = tf.layers.conv2d(pool2, 256, 3, 1, 'same', activation=tf.nn.relu)
+    #12*12*256
+    pool3 = tf.layers.max_pooling2d(conv3, 2, 2, 'same')
+    #6*6*256
+    flatten = tf.reshape(pool3, [-1, 6*6*256])
+    fc = tf.layers.dense(flatten, 1536, activation=tf.nn.relu)
+    dropout = tf.nn.dropout(fc, keep_prob)
+    logits = tf.layers.dense(dropout, 7)
+    outputs = tf.nn.softmax(logits, name=output_node_name)
+    ```
 **3. Result:** I have used 5000 iterations with batch size 100 and restore the model in protocal buffer file
 
 ### Part 2.  Facial Expression Recongition Application in Tensorflow
@@ -41,7 +65,12 @@ dependencies {
 }
 
 ```
+
+The final dependency file looks like 
+
+
 **1. Designing the UI Components**
+
 Home Screen look like this
 ![Home Screen ](/images/home.png)
 
