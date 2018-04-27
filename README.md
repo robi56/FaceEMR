@@ -73,6 +73,7 @@ dependencies {
 
 The final dependency part looks like 
 
+```
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -82,6 +83,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'org.tensorflow:tensorflow-android:+'
 }
+```
 
 
 
