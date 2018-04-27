@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:text="Status: ?">
             </TextView>
         </LinearLayout>
@@ -48,7 +48,7 @@
                 android:id="@+id/detect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:text="Apply">
+                android:layout_weight="1" android:text="Detect">
             </Button>
             <Button
                 android:id="@+id/reset"

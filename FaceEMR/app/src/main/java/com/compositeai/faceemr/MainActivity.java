@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void dispatchTakePictureIntent() {
-        detect.setEnabled(true);
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
@@ -102,8 +101,10 @@ public class MainActivity extends AppCompatActivity {
         }).start();
     }
 
+    /**
+     * The main function for emotion detection
+     */
     private void detectEmotion(){
-
 
         Bitmap image=((BitmapDrawable)faceImageView.getDrawable()).getBitmap();
         Bitmap grayImage = toGrayscale(image);
@@ -151,6 +152,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     */
     private void clearStatus(){
         detect.setEnabled(false);
         this.faceImageView.setImageResource(R.drawable.ic_launcher_background);
@@ -158,6 +162,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     * @param bmpOriginal
+     * @return
+     */
     // https://stackoverflow.com/questions/3373860/convert-a-bitmap-to-grayscale-in-android?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
     public Bitmap toGrayscale(Bitmap bmpOriginal)
     {
@@ -184,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            detect.setEnabled(true);
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             faceImageView.setImageBitmap(imageBitmap);

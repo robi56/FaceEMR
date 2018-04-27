@@ -13,24 +13,14 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-//Reads text from a character-input stream, buffering characters so as to provide for the efficient reading of characters, arrays, and lines.
-//for erros
-//An InputStreamReader is a bridge from byte streams to character streams:
-// //It reads bytes and decodes them into characters using a specified charset.
-// //The charset that it uses may be specified by name or may be given explicitly, or the platform's default charset may be accepted.
-//made by google, used as the window between android and tensorflow native C++
-
 /**
- * Changed from https://github.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/blob/master
- * /app/src/main/java/com/mindorks/tensorflowexample/TensorFlowImageClassifier.java
+ * Helped from https://github.com/llSourcell/A_Guide_to_Running_Tensorflow_Models_on_Android/blob/master/mnistandroid/app/src/main/java/mariannelinhares/mnistandroid/MainActivity.java
  * Created by marianne-linhares on 20/04/17.
  */
 
-//lets create this classifer
 public class TensorFlowClassifier implements Classifier {
 
-    // Only returns if at least this confidence
-    //must be a classification percetnage greater than this
+
     private static final float THRESHOLD = 0.1f;
 
     private TensorFlowInferenceInterface tfHelper;
@@ -60,7 +50,7 @@ public class TensorFlowClassifier implements Classifier {
         return labels;
     }
 
-   //given a model, its label file, and its metadata
+    //given a model, its label file, and its metadata
     //fill out a classifier object with all the necessary
     //metadata including output prediction
     public static TensorFlowClassifier create(AssetManager assetManager, String name,
