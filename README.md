@@ -6,12 +6,12 @@ as predictor in android facial expression recongnition app.
 
 The model is trained using  tensorflow python framework and used in android application where the basic langauge is java. 
 
-Basically tensorflow provides a c++ api, that can be used in android application. The trained model by python langauge can be integrated with android project  after inclduing tensorflow c++ framework dependencies and using native interface the model can be loaded and called in java class. This is the whole thing 
+Basically tensorflow provides a c++ api, that can be used in android application. The trained model by python langauge can be integrated with android project  after inclduing tensorflow c++ framework dependencies and using native interface the model can be loaded and called in java class. This is the whole thing. 
 
 The total work of this project is divided into two parts 
 1) Devlop  a model in tensoflow using python langauge
   
-   **KaggleFaceEmotionRecognition** folder contains work 
+   **KaggleFaceEmotionRecognition** folder contains the work 
 2) Devlop an android appication for facial expression recongtion 
   
    **FaceEMR** folder contains the work 
