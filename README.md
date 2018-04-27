@@ -58,7 +58,7 @@ The data consists of 48x48 pixel grayscale images of faces.The dataset contains 
 
 I have used Android Studio for this application. 
 
-Integrating tensorflow dependency in android is really a tedious thing. the good news is that the latest news that android studio manages all dependencis related to tensorflow after adding the dependencies in build.gradle(Module:app) file 
+Integrating tensorflow dependency in android is really a tedious thing. the good news is that the latest news that android studio manages all dependencis related to tensorflow after adding the dependencies in *build.gradle(Module:app)* file 
 
 ```
 dependencies {
@@ -67,8 +67,17 @@ dependencies {
 
 ```
 
-The final dependency file looks like 
+The final dependency part looks like 
 
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'org.tensorflow:tensorflow-android:+'
+}
 
 
 
@@ -87,7 +96,7 @@ And the final result
 
 **2. Interacting with the Tensorflow Native Api**
 
-The 'org.tensorflow.contrib.android.TensorFlowInferenceInterface' handles all necessary operation to interact with native api. See more details in https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/android
+The *org.tensorflow.contrib.android.TensorFlowInferenceInterface* handles all necessary operation to interact with native api. See more details in https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/android
 
 **3. Finalizing the work** 
 
