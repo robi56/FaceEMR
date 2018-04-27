@@ -27,7 +27,7 @@ The data consists of 48x48 pixel grayscale images of faces.The dataset contains 
     
       input_image->conv2d->pooling->conv2d->pooling->conv2d->pooling->dropout->softmax
 
-**3. Result:** I have used 5000 iterations with batch size 100 and restore the model for using in android 
+**3. Result:** I have used 5000 iterations with batch size 100 and restore the model in protocal buffer file
 
 ### Part 2.  Facial Expression Recongition Application in Tensorflow
 
@@ -44,6 +44,7 @@ dependencies {
 **1. Designing the UI Components** 
 
 **2. Interacting with the Tensorflow Native Api**
+The 'org.tensorflow.contrib.android.TensorFlowInferenceInterface' handles all necessary operation to interact with native api. See more details in https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/android
 
 **3. Finalizing the work** 
 
