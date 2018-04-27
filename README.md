@@ -2,11 +2,11 @@
 ## Emotion Recognition from Facial Expression 
 
 The project aims to train a model using tensorflow for facial emotion detection and used the trained model 
-as predictor in android facial expression recogtion app.
+as predictor in android facial expression recongnition app.
 
-The model is trained using  tensorflow python framework and used in java application. 
-Basically tensorflow provides a c++ api, that can be used in android application. The trained model by python langauge can be integrated with android project 
-after inclduing tensorflow c++ framework dependencies and using native interface the model can be loaded and called in java class. This is the whole thing 
+The model is trained using  tensorflow python framework and used in android application where the basic langauge is java. 
+
+Basically tensorflow provides a c++ api, that can be used in android application. The trained model by python langauge can be integrated with android project  after inclduing tensorflow c++ framework dependencies and using native interface the model can be loaded and called in java class. This is the whole thing 
 
 The total work of this project is divided into two parts 
 1) Devlop  a model in tensoflow using python langauge
@@ -17,11 +17,11 @@ The total work of this project is divided into two parts
    **FaceEMR** folder contains the work 
 
 
-### Part 1.  Facial Expression Recongition Model in Tensorflow 
+### Part 1. Facial Expression Recongition Model developed in Tensorflow 
 
 In this work , I have used a simple Convolutional Neural Network Architecture to train a facial expression dataset.
 
-**1. DataSet:** The dataset is collected from a challenge in kaggle . 
+**1. DataSet:** The dataset is collected from Facial xpression recognition challenge  in kaggle
 The challenge link https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/
 
 The data consists of 48x48 pixel grayscale images of faces.The dataset contains facial expression  of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral
