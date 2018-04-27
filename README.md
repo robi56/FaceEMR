@@ -42,8 +42,7 @@ dependencies {
 
 ```
 **1. Designing the UI Components** 
-Home Screen 
-![GitHub Logo](/images/home.png =500x700)
+![Home Screen ](/images/home.png =100*20)
 
 **2. Interacting with the Tensorflow Native Api**
 The 'org.tensorflow.contrib.android.TensorFlowInferenceInterface' handles all necessary operation to interact with native api. See more details in https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/android
