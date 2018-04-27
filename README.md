@@ -10,9 +10,11 @@ after inclduing tensorflow c++ framework dependencies and using native interface
 
 The total work of this project is divided into two parts 
 1) Devlop  a model in tensoflow using python langauge
-   KaggleFaceEmotionRecognition Folder contains work 
+  
+   **KaggleFaceEmotionRecognition** Folder contains work 
 2) Devlop an android appication for facial expression recongtion 
-   FaceEMR folder contains the work 
+  
+   **FaceEMR** folder contains the work 
 
 
 ### Part 1.  Facial Expression Recongition Model in Tensorflow 
