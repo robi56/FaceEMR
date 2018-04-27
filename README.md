@@ -106,7 +106,9 @@ The *org.tensorflow.contrib.android.TensorFlowInferenceInterface* handles all ne
 
 **3. Finalizing the work** 
 
-There are lots of options for improvement. Adding some cool features and increasing model performance using another models or tuning the hyperparameters of existing models 
+There are lots of options for improvement.
+ 1. Adding some cool features and increasing model performance using another models
+ 2. Tuning the hyperparameters of used cnn model 
 
 
 
