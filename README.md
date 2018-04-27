@@ -9,8 +9,10 @@ Basically tensorflow provides a c++ api, that can be used in android application
 after inclduing tensorflow c++ framework dependencies and using native interface the model can be loaded and called in java class. This is the whole thing 
 
 The total work of this project is divided into two parts 
-1) Devlop  a model in tensoflow using python langauge 
+1) Devlop  a model in tensoflow using python langauge
+   KaggleFaceEmotionRecognition Folder contains work 
 2) Devlop an android appication for facial expression recongtion 
+   FaceEMR folder contains the work 
 
 
 ### Part 1.  Facial Expression Recongition Model in Tensorflow 
