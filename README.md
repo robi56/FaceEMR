@@ -24,6 +24,7 @@ The data consists of 48x48 pixel grayscale images of faces.The dataset contains 
 
 **2. Model:** 
     In this work I have used the below CNN model 
+    
       input_image->conv2d->pooling->conv2d->pooling->conv2d->pooling->dropout->softmax
 
 **3. Result:** I have used 5000 iterations with batch size 100 and restore the model for using in android 
