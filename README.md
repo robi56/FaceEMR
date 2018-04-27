@@ -57,6 +57,9 @@ And the final result
 The 'org.tensorflow.contrib.android.TensorFlowInferenceInterface' handles all necessary operation to interact with native api. See more details in https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/android
 
 **3. Finalizing the work** 
+There are lots of options for improvement. Adding some cool features and increasing model performance using another models or tuning the hyperparameters of existing models 
+
+
 
 
 
